@@ -28,10 +28,11 @@ requirements:
     - zlib
     - libcurl
     - openssl
-    - gnutls
     - if: linux
       then:
         - libnuma
+        # gnutls: required by configure for libnfs >= 6.0, but unused at runtime (no TLS in this libnfs build)
+        - gnutls
         - libnfs
         - libaio
 tests:
