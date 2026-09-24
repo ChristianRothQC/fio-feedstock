@@ -27,7 +27,7 @@ requirements:
   host:
     - zlib
     - libcurl
-    - gnutls
+    - openssl
     - if: linux
       then:
         - libnuma
